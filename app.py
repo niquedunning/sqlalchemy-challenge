@@ -57,7 +57,7 @@ def stations():
     session = Session(engine)
 
     """Return a list of all stations"""
-    results = session.query(station.station).all()
+    results = session.query(station.station, station.name).all()
 
     session.close()
 
